@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razas de Perros - Catálogo Veterinario / Albergue</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Razas de Perros</h1>
+    <h2>Practica Valeria Xel Ayala Susano</h2>
+    <p>Consulta las razas y sus fotos desde The Dog API</p>
+  </header>
+
+  <main class="container">
+    <!-- Sección de Búsqueda y Filtros -->
+    <section class="filters-section">
+      <!-- Búsqueda por Nombre -->
+      <div class="filter-group">
+        <label for="searchInput">Buscar por nombre:</label>
+        <input type="text" id="searchInput" placeholder="Ej: Golden Retriever">
+      </div>
+
+      <!-- Filtro por Temperamento -->
+      <div class="filter-group">
+        <label for="temperamentSelect">Temperamento:</label>
+        <select id="temperamentSelect">
+          <option value="">Todos los temperamentos</option>
+          <option value="Afectuoso">Afectuoso</option>
+          <option value="Agil">Ágil</option>
+          <option value="Jugueton">Juguetón</option>
+          <option value="Alerta">Alerta</option>
+          <option value="Territorial">Territorial</option>
+        </select>
+      </div>
+
+      <!-- Filtro por Tamaño -->
+      <div class="filter-group">
+        <label for="sizeSelect">Tamaño:</label>
+        <select id="sizeSelect">
+          <option value="">Todos los tamaños</option>
+          <option value="pequeno">Pequeño (&lt; 10 kg)</option>
+          <option value="mediano">Mediano (10 - 25 kg)</option>
+          <option value="grande">Grande (&gt; 25 kg)</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Grilla donde se mostrarán los perros -->
+    <section id="dogsContainer" class="dogs-grid">
+      <p class="loading">Cargando razas de perros...</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
